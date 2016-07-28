@@ -1,0 +1,19 @@
+menu:
+  title: Menu
+  description: A menu icon
+
+twitter:
+  title: Twitter
+  description: Twitter logo
+
+wordpress:
+  title: Wordpress
+  description: Wordpress blog logo
+
+facebook:
+  title: Facebook
+  description: Facebook logo
+
+play:
+  title: Play
+  description: Play icon

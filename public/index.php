@@ -20,6 +20,8 @@
 	
 	$app->css_links = array(BASE_URL . '/css/style.css');
 
+	$app->icon_links = array(BASE_URL . '/icons/sprite/icons.svg');
+
 	//this sets up Slim and Twig to be able to work together
 	$view = $app->view();
 	$view->twigTemplateDirs = array(Techstack\Techstack::TEMPLATE_PATH);

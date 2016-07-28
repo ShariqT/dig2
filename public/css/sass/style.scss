@@ -1,16 +1,56 @@
+//vendor files
 @import "normalize";
-@import "screen";
-@import "type";
-@import "vcu-branding";
 
+@import "screen";
+@charset "UTF-8";
+
+//if there are lots of styles here then use external scss file & @import "960max";
 @media screen and (max-width:960px) {
-    @import "960max";
+    
+}
+
+@media only screen and (max-width: 959px) and (min-width: 768px) {
+	iframe {
+		width: 300px;
+		height: 159px;
+	}
+
 }
 
 @media screen and (max-width:768px) {
-    @import "768max";
+
+	#menu {
+		display: block;
+	}
+
+	#flickr-images a, #flickr-images a:link {
+		width: 50%;
+	}
+
+    .menu-btn {
+    	display: inline-block;
+    }
+    .menu-links { 
+    	display: none; 
+    }
+
+	footer {
+		text-align: center;
+	}
 }
 
 @media screen and (max-width:500px) {
-    @import "500max";
+	iframe {
+		width: 250px;
+		height: 141px;
+	}
+
+   .intro h1 {
+   	font-size: 40px;
+   }
+
+   	#flickr-images a, #flickr-images a:link {
+		width: 100%;
+	}
+
 }

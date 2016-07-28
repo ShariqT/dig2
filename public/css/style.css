@@ -1,59 +1,12 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans: 400, 600, 700';
-/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
-/* ==========================================================================
-   HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined in IE 8/9.
- */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-
-/**
- * Correct `inline-block` display not defined in IE 8/9.
- */
-audio,
-canvas,
-video {
-  display: inline-block;
-}
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Address styling not present in IE 8/9.
- */
-[hidden] {
-  display: none;
-}
-
-/* ==========================================================================
-   Base
-   ========================================================================== */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url(https://fonts.googleapis.com/css?family=Forum|Quicksand|Cantata+One|Oranienbaum);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,400italic,700);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -70,14 +23,69 @@ body {
   margin: 0;
 }
 
-/* ==========================================================================
-   Links
+/* HTML5 display definitions
    ========================================================================== */
 /**
- * Address `outline` inconsistency between Chrome and other browsers.
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
  */
-a:focus {
-  outline: thin dotted;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
 }
 
 /**
@@ -88,27 +96,17 @@ a:hover {
   outline: 0;
 }
 
-/* ==========================================================================
-   Typography
+/* Text-level semantics
    ========================================================================== */
 /**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
 b,
 strong {
@@ -116,19 +114,19 @@ strong {
 }
 
 /**
- * Address styling not present in Safari 5 and Chrome.
+ * Address styling not present in Safari and Chrome.
  */
 dfn {
   font-style: italic;
 }
 
 /**
- * Address differences between Firefox and other browsers.
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
  */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
 /**
@@ -137,31 +135,6 @@ hr {
 mark {
   background: #ff0;
   color: #000;
-}
-
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
-
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-pre {
-  white-space: pre-wrap;
-}
-
-/**
- * Set consistent quote types.
- */
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 /**
@@ -190,87 +163,95 @@ sub {
   bottom: -0.25em;
 }
 
-/* ==========================================================================
-   Embedded content
+/* Embedded content
    ========================================================================== */
 /**
- * Remove border when inside `a` element in IE 8/9.
+ * Remove border when inside `a` element in IE 8/9/10.
  */
 img {
   border: 0;
 }
 
 /**
- * Correct overflow displayed oddly in IE 9.
+ * Correct overflow not hidden in IE 9/10/11.
  */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* ==========================================================================
-   Figures
+/* Grouping content
    ========================================================================== */
 /**
- * Address margin not present in IE 8/9 and Safari 5.
+ * Address margin not present in IE 8/9 and Safari.
  */
 figure {
-  margin: 0;
+  margin: 1em 40px;
 }
 
-/* ==========================================================================
-   Forms
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
    ========================================================================== */
 /**
- * Define consistent border, margin, and padding.
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
  */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
 /**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * 1. Correct font family not being inherited in all browsers.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
 button,
 input,
+optgroup,
 select,
 textarea {
-  font-family: inherit;
+  color: inherit;
   /* 1 */
-  font-size: 100%;
+  font: inherit;
   /* 2 */
   margin: 0;
   /* 3 */
 }
 
 /**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-button,
-input {
-  line-height: normal;
+button {
+  overflow: visible;
 }
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
  */
 button,
 select {
@@ -303,8 +284,28 @@ html input[disabled] {
 }
 
 /**
- * 1. Address box sizing set to `content-box` in IE 8/9.
- * 2. Remove excess padding in IE 8/9.
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
  */
 input[type="checkbox"],
 input[type="radio"] {
@@ -315,8 +316,18 @@ input[type="radio"] {
 }
 
 /**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
 input[type="search"] {
@@ -329,8 +340,9 @@ input[type="search"] {
 }
 
 /**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
  */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
@@ -338,27 +350,41 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 /**
- * Remove inner padding and border in Firefox 4+.
+ * Define consistent border, margin, and padding.
  */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
 }
 
 /**
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-textarea {
-  overflow: auto;
+legend {
+  border: 0;
   /* 1 */
-  vertical-align: top;
+  padding: 0;
   /* 2 */
 }
 
-/* ==========================================================================
-   Tables
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
    ========================================================================== */
 /**
  * Remove most spacing between table cells.
@@ -366,6 +392,11 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
 }
 
 /*
@@ -396,277 +427,546 @@ table {
 /* Include clearfix on parent to clear nested columns,
 or wrap each row of columns in a @include row */
 /* You can also use a @include clear to clear columns */
-/* @group ----- Generic ----- */
-/* @end */
-#vcuIdentityWrapper {
-  width: 100%;
-  z-index: 98;
-  top: 0;
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  #vcuIdentityWrapper {
-    position: static !important;
-    top: 0 !important;
-  }
+.button, a.button, input, #menu-container, .menu-links a, .menu-links a:link, .menu-links a:visited {
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
-/* VCU Branding Layout
---------------------------------------------------------------------*/
-.no-js #vcuIdentityWrapper {
-  display: none;
+#menu-container, #menu #menu-inner li, .intro, .interior, section, #flickr-images, footer {
+  *zoom: 1;
 }
-
-.js #vcuIdentityWrapper {
-  display: block;
-  background: #fff !important;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  text-align: left;
+#menu-container:before, #menu #menu-inner li:before, .intro:before, .interior:before, section:before, #flickr-images:before, footer:before, #menu-container:after, #menu #menu-inner li:after, .intro:after, .interior:after, section:after, #flickr-images:after, footer:after {
+  content: " ";
+  display: table;
 }
-
-.js #vcuIdentity header {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0;
-  height: 60px;
-}
-
-/* Identity */
-.js #vcuIdentity {
-  width: 100%;
-  height: auto;
-  max-width: 982px;
-  margin: 0 auto;
-  padding: 2px 0;
-  background-color: #fff;
-}
-
-.js #vcuIdentity h1 {
-  margin: 0;
-  padding: 0;
-}
-
-.js #vcuIdentity h1 a {
-  text-indent: -9999px;
-  display: block;
-  width: 804px;
-  height: 60px;
-  background: url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/vcubrand.gif) no-repeat;
-  margin: 0 0 0 30px;
-  padding: 0;
-  text-decoration: none;
-  border: 0;
-}
-
-.js #vcuIdentity h1 a:hover {
-  opacity: 1;
-}
-
-.js #vcuIdentity h2 {
-  margin: 0;
-  padding: 0;
-  float: right;
-}
-
-.js #vcuIdentity h2 a {
-  text-indent: -9999px;
-  display: block;
-  width: 109px;
-  height: 31px;
-  background: url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/makeitreal.gif) no-repeat;
-  margin: -37px 40px 0 0;
-  padding: 0;
-  text-decoration: none;
-  border: 0;
-}
-
-.js #vcuIdentity h2 a:hover {
-  opacity: 1;
-}
-
-/* Logo
-----------------------------------------------------------------------*/
-#realLogo {
-  width: 100%;
-  background-color: #fff;
-  display: none;
-  margin: 0;
-  height: 50px;
-  position: relative;
+#menu-container:after, #menu #menu-inner li:after, .intro:after, .interior:after, section:after, #flickr-images:after, footer:after {
   clear: both;
-  margin-top: -50;
-  /* negative value of footer height */
 }
 
-#realLogo h1 {
+.menu-btn svg, footer svg {
+  /* Flow with text content */
+  display: inline-block;
+  /* Inherit the parent text color */
+  fill: white;
+  /* Use the parent font-size for width and height */
+  height: 1em;
+  width: 1em;
+  /* Vertically align icon with adjacent text */
+  vertical-align: middle;
+  /* Align more nicely with capital letters */
+  position: relative;
+  top: -0.0625em;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #000000;
+  font-family: Helvetica,Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+  color: #5a5a5a;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+a, a:link, a:visited, a:hover {
+  color: #449bd2;
+}
+
+a.skip-to-content {
+  visibility: visible;
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+  box-shadow: #080808 3px 3px 3px;
+  left: -230px;
+  background: white;
+  padding: 11px;
+  border-radius: 0px 0px 3px;
+}
+a.skip-to-content:focus, a.skip-to-content:active, a.skip-to-content:hover {
+  left: 0px;
+}
+
+.button, a.button, input {
+  display: inline-block;
+  border: none;
+  background: #449bd2;
+  padding: 10px 20px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.button:hover, a.button:hover {
+  background: #768692;
+}
+
+.button:active, a.button:active {
+  background: #1b435e;
+}
+
+input[type="file"] {
+  width: 100%;
+  margin-top: 10px;
+}
+
+input[type="submit"] {
+  background: #ea8d25;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#menu-container {
+  position: absolute;
+  width: 100%;
+  z-index: 4;
+  background: #449bd2;
+  border-bottom: 1px solid #449bd2;
+}
+
+.menu-btn {
+  display: none;
+  color: #449bd2;
+  padding: 15px;
+  cursor: pointer;
+}
+.menu-btn svg {
+  fill: #3d3d3d;
+}
+
+.menu-links ul {
+  list-style: none;
+  padding: 0;
+}
+.menu-links li {
+  display: inline;
+}
+.menu-links a, .menu-links a:link, .menu-links a:visited {
+  color: #FFFFFF;
+  margin: 0 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu-links a:hover, .menu-links a:link:hover, .menu-links a:visited:hover {
+  color: #449bd2;
+  padding: 2px 0;
+  border-bottom: 1px solid #449bd2;
+}
+.menu-links h1 {
+  text-transform: uppercase;
+  display: inline;
+  font-size: 18px;
+  color: #3d3d3d;
+  font-weight: 400;
+}
+
+#menu {
+  display: none;
+}
+#menu #menu-inner {
+  position: fixed;
+  background: #3d3d3d;
   margin: 0;
   padding: 0;
-  font-size: 30px;
-  background-color: #000;
+  z-index: 5;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-transition: -webkit-transform ease 250ms;
+  -moz-transition: -webkit-transform ease 250ms;
+  -ms-transition: -webkit-transform ease 250ms;
+  -o-transition: -webkit-transform ease 250ms;
+  transition: -webkit-transform ease 250ms;
+  -webkit-transition: transform ease 250ms;
+  -moz-transition: transform ease 250ms;
+  -ms-transition: transform ease 250ms;
+  -o-transition: transform ease 250ms;
+  transition: transform ease 250ms;
 }
-
-#realLogo h1 a {
-  text-indent: -9999px;
+#menu #menu-inner ul {
   display: block;
-  width: 280px;
-  height: 30px;
-  background: url(https://apps.library.vcu.edu/assets/shared/images/makeitrealFooter.gif) no-repeat;
-  margin: 0 auto;
-  padding: 0;
-}
-
-#realLogo h2 {
   margin: 0;
   padding: 0;
-  font-size: 15px;
-  background-color: #000;
+}
+#menu #menu-inner li {
+  display: block;
+  background: #449bd2;
+  border-bottom: 3px solid #3d3d3d;
+}
+#menu #menu-inner li h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  display: inline;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #3d3d3d;
+}
+#menu #menu-inner li a, #menu #menu-inner li a:link, #menu #menu-inner li a:visited {
+  padding: 12px;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  color: #3d3d3d;
+}
+#menu #menu-inner li a:hover {
+  background-color: #ffffff;
+  color: #449bd2;
 }
 
-#realLogo h2 a {
-  text-indent: -9999px;
-  display: block;
-  width: 280px;
-  height: 15px;
-  background: url(https://apps.library.vcu.edu/assets/shared/images/vcubar-footer.gif) no-repeat;
+.left {
+  background: #ffffff;
+  color: #449bd2;
+  left: -250px;
+}
+
+.show {
+  transform: translate3d(250px, 0, 0);
+  -ms-transform: translate3d(250px, 0, 0);
+  -webkit-transform: translate3d(250px, 0, 0);
+  -o-transform: translate3d(250px, 0, 0);
+  -moz-transform: translate3d(250px, 0, 0);
+}
+
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+#digupload {
+  background: #FFFFFF;
+  border-radius: 5px;
+  margin: auto 200px;
+  padding: 20px;
+}
+
+.intro {
+  height: 600px;
+  color: #449bd2;
+  text-align: center;
+}
+.intro #intro-content {
+  margin: 200px auto;
+}
+.intro span {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 42px;
+}
+.intro h1 {
+  margin: 0;
+  font-size: 64px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.interior {
+  color: #449bd2;
+  background-color: #0D0D0B;
+  text-align: center;
+}
+.interior #interior-content {
+  margin: 85px auto 40px auto;
+}
+.interior span {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+.interior h1 {
+  margin: 0;
+  font-size: 32px;
+  text-align: center;
+}
+
+section {
+  background: #FFFFFF;
+}
+
+.divide {
+  height: 155px;
+  background-position: center;
+  background-color: #7F7F7F;
+  background-repeat: repeat-y;
+  text-align: center;
+  background-attachment: fixed;
+}
+
+.box {
+  position: relative;
   margin: 0 auto;
   padding: 0;
+  width: 960px;
+  background: #FFFFFF;
+  margin-bottom: 25px;
 }
-
-/********************
-  Media queries
-*********************/
-@media screen and (max-width: 995px) {
-  #vcuIdentityWrapper {
-    background: white url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/body-bg-768.gif) repeat-x top !important;
-  }
-
-  #vcuIdentity {
-    max-width: 840px !important;
-  }
-
-  #vcuIdentity h1 a {
-    background: url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/vcubrand-768.gif) no-repeat !important;
-    width: 659px !important;
-  }
-
-  #vcuIdentity h2 a {
-    margin-top: -41px !important;
-  }
-
-  #vcuIdentity hgroup {
-    padding: 3px 0 0;
+.box:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .box {
+    width: 768px;
   }
 }
-@media screen and (max-width: 873px) {
-  body {
-    background-position: 0 48px !important;
+@media only screen and (max-width: 767px) {
+  .box {
+    width: 300px;
   }
-
-  #vcuIdentityWrapper {
-    background: white url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/body-bg-600.gif) repeat-x top;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .box {
+    width: 420px;
   }
-
-  #vcuIdentity {
-    margin: 0 auto;
-    max-width: 670px !important;
+}
+.box .box-content, .box aside {
+  padding: 30px;
+}
+.box .box-content {
+  width: 100%;
+}
+.box .box-content p {
+  line-height: 27px;
+}
+.box .box-content.flickr-content {
+  width: 100%;
+}
+.box .box-content.content-output {
+  padding-bottom: 0;
+}
+.box aside {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 280px;
+}
+@media only screen and (max-width: 767px) {
+  .box aside {
+    margin: 0;
   }
-
-  #vcuIdentity h1 a {
-    background: url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/vcubrand-600.gif) no-repeat !important;
-    width: 519px !important;
-    text-decoration: none !important;
-    border: 0 !important;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .box aside {
+    width: 220px;
   }
-
-  #vcuIdentity h2 a {
-    background: url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/makeitreal-600.gif) no-repeat !important;
-    width: 84px !important;
-    height: 39px !important;
-    margin-top: -46px !important;
-    text-decoration: none !important;
-    border: 0 !important;
+}
+@media only screen and (max-width: 767px) {
+  .box aside {
+    width: 300px;
   }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .box aside {
+    width: 420px;
+  }
+}
+.box h1, .box h2, .box h3, .box h4 {
+  color: #449bd2;
+  margin-top: 0;
+}
+.box ul li, .box ol li {
+  margin: 10px 0;
+  line-height: 27px;
+}
 
-  #vcuIdentity hgroup {
-    padding: 5px 0 0;
+#flickr-images {
+  width: 100%;
+}
+#flickr-images a, #flickr-images a:link {
+  display: block;
+  width: 25%;
+  float: left;
+  height: 158px;
+  text-align: center;
+  overflow: hidden;
+}
+#flickr-images img {
+  vertical-align: bottom;
+  padding: 5px;
+  height: auto;
+}
+
+aside {
+  font-size: 13px;
+  line-height: 20px;
+}
+aside h1, aside h2, aside h3, aside h4 {
+  font-size: 18px;
+}
+aside img {
+  width: 100%;
+}
+
+.fn-pagination {
+  display: none;
+}
+
+footer {
+  background: #000000;
+  color: #ffffff;
+  padding: 30px 0;
+}
+footer svg {
+  fill: #ffffff;
+  width: 20px;
+  height: 20px;
+  margin: 10px 10px 0 0;
+}
+footer div {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 960px;
+}
+footer div:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  footer div {
+    width: 768px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  footer div {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  footer div {
+    width: 420px;
+  }
+}
+footer .contact, footer .sponsors {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 340px;
+  padding: 20px;
+}
+@media only screen and (max-width: 767px) {
+  footer .contact, footer .sponsors {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  footer .contact, footer .sponsors {
+    width: 268px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  footer .contact, footer .sponsors {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  footer .contact, footer .sponsors {
+    width: 420px;
+  }
+}
+footer a, footer a:link, footer a:visited, footer a:hover {
+  color: #449bd2;
+}
+footer .social {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  padding: 20px;
+}
+@media only screen and (max-width: 767px) {
+  footer .social {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  footer .social {
+    width: 172px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  footer .social {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  footer .social {
+    width: 420px;
+  }
+}
+footer .social a, footer .social a:link, footer .social a:visited, footer .social a:hover {
+  text-decoration: none;
+}
+footer ul, footer li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+/* @end */
+@media only screen and (max-width: 959px) and (min-width: 768px) {
+  iframe {
+    width: 300px;
+    height: 159px;
   }
 }
 @media screen and (max-width: 768px) {
-  #vcuIdentity {
-    margin: 0 auto;
-    max-width: 670px !important;
+  #menu {
+    display: block;
   }
 
-  #vcuIdentity hgroup {
-    padding: 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  #wrapper, #wrap, #content, #container, .wrapper, .wrap, .content, .container {
-    padding-bottom: 50px;
-    min-height: 100%;
+  #flickr-images a, #flickr-images a:link {
+    width: 50%;
   }
 
-  body {
-    background-position: 0 35px !important;
+  .menu-btn {
+    display: inline-block;
   }
 
-  #vcuIdentityWrapper {
-    background: white url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/body-bg-sm.gif) repeat-x top !important;
+  .menu-links {
+    display: none;
   }
 
-  #vcuIdentity h1 a {
-    background: url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/vcuseal.gif) no-repeat !important;
-    margin: 0 auto !important;
-    width: 99px !important;
-    height: 35px !important;
-    text-decoration: none !important;
-    border: 0 !important;
+  footer {
+    text-align: center;
   }
-
-  #vcuIdentity h2 a {
-    display: none !important;
-    text-decoration: none !important;
-    border: 0 !important;
-  }
-
-  #realLogo {
-    display: block !important;
-  }
-
-  #vcuIdentity hgroup {
-    padding: 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  /* @group ----- Generic HTML elements ----- */
-  /* @end */
-  /* @group ----- Global selectors ----- */
-  /* @end */
-  /* @group ----- Header ----- */
-  /* @end */
-  /* @group ----- Navigation ----- */
-  /* @end */
-  /* @group ----- Footer ----- */
-  /* @end */
-  /* @group ----- Home ----- */
-  /* @end */
-  /* @group ----- Items/Browse ----- */
-  /* @end */
-  /* @group ----- Items/Browse ----- */
-  /* @end */
 }
 @media screen and (max-width: 500px) {
-  /* @group ----- Generic HTML elements ----- */
-  /* @end */
-  /* @group ----- Global selectors ----- */
-  /* @end */
-  /* @group ----- Header ----- */
-  /* @end */
-  /* @group ----- Navigation ----- */
-  /* @end */
-  /* @group ----- Footer ----- */
-  /* @end */
+  iframe {
+    width: 250px;
+    height: 141px;
+  }
+
+  .intro h1 {
+    font-size: 40px;
+  }
+
+  #flickr-images a, #flickr-images a:link {
+    width: 100%;
+  }
 }

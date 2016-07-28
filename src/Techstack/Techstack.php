@@ -10,8 +10,8 @@ class Techstack
 
 
 	//base url
-	const DEBUG_BASE_URL = 'http://localhost';
-	const PROD_BASE_URL = 'http://localhost';
+	const DEBUG_BASE_URL = 'http://localhost:8888';
+	const PROD_BASE_URL = 'http://localhost:8888';
 
 	//path to where the Twig templates reside
 	const TEMPLATE_PATH = '../php_templates';

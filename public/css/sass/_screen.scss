@@ -37,7 +37,7 @@ a.skip-to-content {
     }
 }
 
-.button, a.button {
+.button, a.button, input {
     display: inline-block;
     border: none;
     background: $color-primary;
@@ -57,14 +57,16 @@ a.skip-to-content {
    background: #1b435e;
    }
 
+input[type="file" i] {background: #ffffff;}
+
 #menu-container {
   @extend %clearfix;
   @extend %transition;
   position: absolute;
   width: 100%;
   z-index: 4;
-  background: #FFFFFF;
-  border-bottom: 4px solid $color-accent;
+  background: #449bd2;
+  border-bottom: 1px solid $color-accent;
 }
 
 .menu-btn {
@@ -89,7 +91,7 @@ a.skip-to-content {
   li { display: inline; }
 
   a, a:link, a:visited {
-    color: #3d3d3d;
+    color: #FFFFFF;
     margin: 0 20px;
     font-weight: 600;
     text-decoration: none;
@@ -194,6 +196,13 @@ a.skip-to-content {
   overflow: hidden;
 }
 
+#digupload {
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin: auto 200px;
+    padding: 20px;
+}
+
 .intro {
     @extend %clearfix;
     height: 600px;
@@ -201,7 +210,6 @@ a.skip-to-content {
     text-align: center;
 
     #intro-content {
-      width: 300px;
       margin: 200px auto;
     }
 
@@ -271,8 +279,8 @@ section {
   }
 
   .box-content {
-    @include columns(11);
-
+    //@include columns(11);
+    width: 100%;
     p {line-height: 27px;}
   }
 

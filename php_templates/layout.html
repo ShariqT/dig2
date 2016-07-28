@@ -20,7 +20,9 @@
 	<nav id="menu-container">
 		<a href="javascript;:" tabindex="0" aria-label="Menu" class="menu-btn">
 		    <svg>
-		      <use xlink:href="/icons/sprite/icons.svg#menu-icon"/>
+		    {% for icon in icon_links %}
+		      <use xlink:href="{{icon}}#menu-icon"/>
+		     {% endfor %}
 		    </svg>
 		</a>
 		<ul class="menu-links">
@@ -36,9 +38,51 @@
 		</ul>
 	</nav>
 <!-- END HEADER -->
+
+<!-- END HEADER -->
+	<main>
+	<a id="begincontent" name="begincontent" title="Begin content" href="#"></a>
 	{% block content %}{% endblock %}
+<!-- END CONTENT -->
+	</main>
 
+<!--BEGIN FOOTER-->	
+	<footer>
+		<div>
+			<ul class="contact">
+				<li><a href="#">DigArchiver</a></li>
+				<li><a href="#">Virginia Commonwealth University</a></li>
+				<li><a href="#">E-mail Us</a></li>
+				<li>901 Park Ave. Box 842033</li>
+				<li>Richmond, VA 23284</li>
+				<li>(804) 828-0593</li>
+			</ul>
+			<ul class="sponsors">
+				<li><strong>Created by</strong></li>
+				<li><a href="">VCU Libraries</a></li>
+			</ul>
+			<ul class="social">
+				<li><strong>Connect with us</strong></li>
+				<a href="https://www.facebook.com/VCU-Cabell-First-Novelist-Award-130807206738/">
+				    <svg>
+				      <use xlink:href="assets/icons/sprite/icons.svg#facebook-icon"/>
+				    </svg>
+			    </a>
+			    <a href="https://twitter.com/FirstNovelVCU">
+	    		    <svg>
+				      <use xlink:href="assets/icons/sprite/icons.svg#twitter-icon"/>
+				    </svg>
+			    </a>
+			    <a href="http://wp.vcu.edu/firstnovelist/">
+	    		    <svg>
+				      <use xlink:href="assets/icons/sprite/icons.svg#wordpress-icon"/>
+				    </svg>
+			    </a>
+			</ul>
 
+		</div>
+	</footer>
+<!--END FOOTER-->
 	<script> var BASE_URL = "{{base_url}}"; </script>
 	{% for script in js_scripts %}
 		<script src="{{script}}"></script>

@@ -1,8 +1,40 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<h1>Hello World</h1>
+		<div id="heading" class="intro">
+			<div id="intro-content">
+				
+				<h1>DigArchiver</h1>
+				<form id="digupload" method="post" action="file-upload-1.htm" name="submit" enctype="multipart/form-data">
+				<input type="file" name="proj">
+				<input type="submit" name="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+<!-- START CONTENT -->
+		
+		<section>
+			<div class="box">
+				<div class="box-content">
 
-<div id="vcuApp"></div>
+					<h1>What is DigArchiver?</h1>
+					<div id="vcuApp"></div>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi semper ornare iaculis. Proin dapibus interdum fermentum. Curabitur eget interdum nisl, eget tristique tortor. Mauris mollis dignissim est, vitae sagittis ipsum varius et. Nam interdum rutrum gravida. Praesent vel elit at leo rhoncus eleifend. Quisque non sodales nisi. Integer nec tellus massa. Vestibulum rutrum lorem lacus, in elementum lacus aliquet ac.
+					</p>
+					<p>
+					Quisque pulvinar semper ipsum, eu tempor lorem vestibulum nec. Vestibulum congue quam ligula. Fusce in dignissim mi. Phasellus viverra congue felis, sed ullamcorper ligula lacinia id. Integer quis diam et nisi ornare euismod quis sit amet nisi. Vivamus in nisl vel sapien sollicitudin ultricies at at augue. Aliquam feugiat mauris vitae eros blandit, et cursus nulla bibendum. Proin efficitur diam quis aliquam iaculis. Sed vitae dui sagittis, eleifend felis ut, euismod nunc.
+					</p>
+				</div>
+<!-- 				<aside>
+				<h3>More Info</h3>
+				<p>
+					<li><a href="#">Link to more info</a></li>
+					<li><a href="#">Link to more info</a></li>
+					<li><a href="#">Link to more info</a></li>
+				</p>
+				</aside> -->
+			</div>
+		</section>
 
 {% endblock %}

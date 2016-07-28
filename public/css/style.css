@@ -427,7 +427,7 @@ th {
 /* Include clearfix on parent to clear nested columns,
 or wrap each row of columns in a @include row */
 /* You can also use a @include clear to clear columns */
-.button, a.button, #menu-container, .menu-links a, .menu-links a:link, .menu-links a:visited {
+.button, a.button, input, #menu-container, .menu-links a, .menu-links a:link, .menu-links a:visited {
   -o-transition: .2s;
   -ms-transition: .2s;
   -moz-transition: .2s;
@@ -482,7 +482,7 @@ h1, h2, h3, h4 {
 }
 
 a, a:link, a:visited, a:hover {
-  color: #006341;
+  color: #449bd2;
 }
 
 a.skip-to-content {
@@ -500,10 +500,10 @@ a.skip-to-content:focus, a.skip-to-content:active, a.skip-to-content:hover {
   left: 0px;
 }
 
-.button, a.button {
+.button, a.button, input {
   display: inline-block;
   border: none;
-  background: #006341;
+  background: #449bd2;
   padding: 10px 20px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -521,17 +521,21 @@ a.skip-to-content:focus, a.skip-to-content:active, a.skip-to-content:hover {
   background: #1b435e;
 }
 
+input[type="file" i] {
+  background: #ffffff;
+}
+
 #menu-container {
   position: absolute;
   width: 100%;
   z-index: 4;
-  background: #FFFFFF;
-  border-bottom: 4px solid #F8B801;
+  background: #449bd2;
+  border-bottom: 1px solid #449bd2;
 }
 
 .menu-btn {
   display: none;
-  color: #006341;
+  color: #449bd2;
   padding: 15px;
   cursor: pointer;
 }
@@ -547,15 +551,15 @@ a.skip-to-content:focus, a.skip-to-content:active, a.skip-to-content:hover {
   display: inline;
 }
 .menu-links a, .menu-links a:link, .menu-links a:visited {
-  color: #3d3d3d;
+  color: #FFFFFF;
   margin: 0 20px;
   font-weight: 600;
   text-decoration: none;
 }
 .menu-links a:hover, .menu-links a:link:hover, .menu-links a:visited:hover {
-  color: #006341;
+  color: #449bd2;
   padding: 2px 0;
-  border-bottom: 1px solid #006341;
+  border-bottom: 1px solid #449bd2;
 }
 .menu-links h1 {
   text-transform: uppercase;
@@ -597,7 +601,7 @@ a.skip-to-content:focus, a.skip-to-content:active, a.skip-to-content:hover {
 }
 #menu #menu-inner li {
   display: block;
-  background: #F8B801;
+  background: #449bd2;
   border-bottom: 3px solid #3d3d3d;
 }
 #menu #menu-inner li h1 {
@@ -617,12 +621,12 @@ a.skip-to-content:focus, a.skip-to-content:active, a.skip-to-content:hover {
 }
 #menu #menu-inner li a:hover {
   background-color: #ffffff;
-  color: #006341;
+  color: #449bd2;
 }
 
 .left {
   background: #ffffff;
-  color: #006341;
+  color: #449bd2;
   left: -250px;
 }
 
@@ -639,13 +643,19 @@ a.skip-to-content:focus, a.skip-to-content:active, a.skip-to-content:hover {
   overflow: hidden;
 }
 
+#digupload {
+  background: #FFFFFF;
+  border-radius: 5px;
+  margin: auto 200px;
+  padding: 20px;
+}
+
 .intro {
   height: 600px;
-  color: #F8B801;
+  color: #449bd2;
   text-align: center;
 }
 .intro #intro-content {
-  width: 300px;
   margin: 200px auto;
 }
 .intro span {
@@ -662,7 +672,7 @@ a.skip-to-content:focus, a.skip-to-content:active, a.skip-to-content:hover {
 
 .interior {
   margin-top: 45px;
-  color: #F8B801;
+  color: #449bd2;
   background-color: #0D0D0B;
   text-align: center;
 }
@@ -728,31 +738,7 @@ section {
   padding: 30px;
 }
 .box .box-content {
-  float: left;
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 640px;
-}
-@media only screen and (max-width: 767px) {
-  .box .box-content {
-    margin: 0;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .box .box-content {
-    width: 508px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .box .box-content {
-    width: 300px;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .box .box-content {
-    width: 420px;
-  }
+  width: 100%;
 }
 .box .box-content p {
   line-height: 27px;
@@ -899,7 +885,7 @@ footer .contact, footer .sponsors {
   }
 }
 footer a, footer a:link, footer a:visited, footer a:hover {
-  color: #F8B801;
+  color: #449bd2;
 }
 footer .social {
   float: left;

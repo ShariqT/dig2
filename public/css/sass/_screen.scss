@@ -57,7 +57,36 @@ a.skip-to-content {
    background: #1b435e;
    }
 
-input[type="file" i] {background: #ffffff;}
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: red;
+}
+
+.inputfile + label {
+  cursor: pointer; /* "hand" cursor */
+}
+
+.inputfile:focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
 
 #menu-container {
   @extend %clearfix;
@@ -261,7 +290,6 @@ section {
 
 .divide {
     height: 155px;
-    background-image: url('../images/orb-2.jpg');
     background-position: center;
     background-color: #7F7F7F;
     background-repeat: repeat-y;

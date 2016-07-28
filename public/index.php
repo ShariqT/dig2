@@ -6,11 +6,9 @@
 
 
 
-	if($_SERVER['APP_ENV'] == "Debug"){
+	
 		define('BASE_URL', \Techstack\Techstack::DEBUG_BASE_URL);
-	}else{
-		define('BASE_URL', \Techstack\Techstack::PROD_BASE_URL);
-	}
+	
 
 
 	//base styles/scripts that will apply to all pages
@@ -30,9 +28,7 @@
 	$view->parserExtensions = array(new Slim\Views\TwigExtension());
 	
 	//add the DefaultStyles and CAS
-	if(Techstack\Techstack::CAS_ENABLED){
-		$app->add(new Techstack\Middleware\CAS());
-	}
+	
 	$app->add(new Techstack\Middleware\DefaultStyles());
 	$app->add(new \Slim\Middleware\SessionCookie(array(
 	    'expires' => '1 day',
@@ -41,7 +37,7 @@
 	    'secure' => true,
 	    'httponly' => true,
 	    'name' => 'vcul_session',
-	    'secret' => $_SERVER['COOKIE_SECRET'],
+	    'secret' => "dfsdfsdfsf",
 	    'cipher' => MCRYPT_RIJNDAEL_256,
 	    'cipher_mode' => MCRYPT_MODE_CBC
 	)));
@@ -79,7 +75,7 @@
 	these will be protected via CAS. By default,
 	all requests that start with '/api/' will be private
 	*/
-	$app->private_routes = array('/hello/:name');
+	
 
 
 	/*

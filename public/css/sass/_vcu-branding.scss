@@ -1,0 +1,75 @@
+// Branding bar positioning fix
+#vcuIdentityWrapper {
+  width: 100%;
+  z-index: 98;
+  top: 0;
+
+  /////////////////////////////////////////////////
+  // Handheld Temporary Fix ///////////////////////
+  /////////////////////////////////////////////////
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    position: static !important;
+    top: 0 !important;
+  }
+  /////////////////////////////////////////////////
+  /////////////////////////////////////////////////
+}
+
+/* VCU Branding Layout
+--------------------------------------------------------------------*/
+.no-js #vcuIdentityWrapper { display:none;}
+.js #vcuIdentityWrapper { display:block; background: #fff !important; height: auto; margin:0; padding:0; text-align:left;}
+.js #vcuIdentity header {width:100%; max-width: 960px; margin:0 auto; padding:0; height: 60px;}
+
+  /* Identity */
+  .js #vcuIdentity {width:100%; height: auto; max-width:982px; margin:0 auto; padding:2px 0; background-color:#fff;}
+  .js #vcuIdentity h1 {margin:0; padding:0;}
+  .js #vcuIdentity h1 a {text-indent: -9999px; display:block; width:804px; height:60px; background: url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/vcubrand.gif) no-repeat; margin: 0 0 0 30px; padding:0; text-decoration:none; border:0; }
+  .js #vcuIdentity h1 a:hover {opacity:1}
+  .js #vcuIdentity h2 {margin:0; padding:0; float:right;}
+  .js #vcuIdentity h2 a {text-indent: -9999px; display:block; width:109px; height:31px; background: url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/makeitreal.gif) no-repeat; margin: -37px 40px 0 0; padding:0; text-decoration:none; border:0; }
+  .js #vcuIdentity h2 a:hover {opacity:1}
+
+/* Logo
+----------------------------------------------------------------------*/
+#realLogo {width:100%; background-color:#fff; display:none; margin:0; height:50px; position: relative; clear:both; margin-top: -50; /* negative value of footer height */  }
+#realLogo h1 {margin:0; padding:0; font-size:30px; background-color:#000;}
+#realLogo h1 a {text-indent: -9999px; display:block; width:280px; height:30px; background: url(https://apps.library.vcu.edu/assets/shared/images/makeitrealFooter.gif) no-repeat; margin:0 auto; padding:0;}
+#realLogo h2 {margin:0; padding:0; font-size:15px; background-color:#000;}
+#realLogo h2 a {text-indent: -9999px; display:block; width:280px; height:15px; background: url(https://apps.library.vcu.edu/assets/shared/images/vcubar-footer.gif) no-repeat; margin:0 auto; padding:0;}
+
+/********************
+  Media queries
+*********************/
+
+@media screen and (max-width:995px) {
+  #vcuIdentityWrapper { background: #fff url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/body-bg-768.gif) repeat-x top !important; }
+  #vcuIdentity {max-width:840px !important;}
+  #vcuIdentity h1 a {background:url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/vcubrand-768.gif) no-repeat !important; width:659px !important;}
+  #vcuIdentity h2 a { margin-top:-41px !important;}
+  #vcuIdentity hgroup { padding: 3px 0 0; }
+}
+
+@media screen and (max-width:873px) {
+  body {background-position:0 48px !important;}
+  #vcuIdentityWrapper { background: #fff url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/body-bg-600.gif) repeat-x top; }
+  #vcuIdentity {margin:0 auto; max-width:670px !important;}
+  #vcuIdentity h1 a {background:url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/vcubrand-600.gif) no-repeat !important; width:519px !important; text-decoration:none !important; border:0 !important;}
+  #vcuIdentity h2 a {background:url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/makeitreal-600.gif) no-repeat !important; width:84px !important; height:39px !important; margin-top:-46px !important; text-decoration:none !important; border:0 !important;}
+  #vcuIdentity hgroup { padding: 5px 0 0; }
+}
+
+@media screen and (max-width:768px) {
+  #vcuIdentity {margin:0 auto; max-width:670px !important;}
+  #vcuIdentity hgroup { padding: 0; }
+}
+
+@media screen and (max-width:768px) {
+  #wrapper, #wrap, #content, #container, .wrapper, .wrap, .content, .container { padding-bottom: 50px; min-height: 100%;}
+  body {background-position:0 35px !important;}
+  #vcuIdentityWrapper { background: #fff url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/body-bg-sm.gif) repeat-x top !important; }
+  #vcuIdentity h1 a {background:url(https://www.pubapps.vcu.edu/identity/widgets/branding/white/responsive/images/vcuseal.gif) no-repeat !important; margin: 0 auto !important; width:99px !important; height:35px !important; text-decoration:none !important; border:0 !important;}
+  #vcuIdentity h2 a {display:none !important; text-decoration:none !important; border:0 !important;}
+  #realLogo {display:block !important;}
+  #vcuIdentity hgroup { padding: 0; }
+}

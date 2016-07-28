@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+	
+	{% for css in css_links %}
+		<link rel='stylesheet' href="{{css}}" />
+	{% endfor %}
+	
+	{% for css in route_css_links %}
+		<link rel='stylesheet' href="{{css}}" />
+	{% endfor %}
+</head>
+<body>
+	{% block content %}{% endblock %}
+
+
+	<script> var BASE_URL = "{{base_url}}"; </script>
+	{% for script in js_scripts %}
+		<script src="{{script}}"></script>
+	{% endfor %}
+
+	{% for script in route_js_scripts %}
+		<script src="{{script}}"></script>
+	{% endfor %}
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+	"name":"vculib stack",
+	"private":true,
+	"dependencies":{
+		"jquery":"*",
+		"handlebars":"*",
+		"ember":"v1.5.1"
+	}
+}

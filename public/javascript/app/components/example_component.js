@@ -1,0 +1,1 @@
+App.ExampleStuffComponent = Ember.Component.extend({});

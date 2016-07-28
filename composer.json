@@ -1,0 +1,35 @@
+{
+	"name":"vculibraries/techstack",
+	"type": "framework",
+	"description": "Common technology stack for Virginia Commonwealth Univerity libraries",
+	"keywords": ["vcu", "starter app"],
+	"homepage": "http://www.library.vcu.edu",
+	"authors": [{
+		"name": "Shariq Torres",
+		"email": "sdtorres@vcu.edu",
+		"role": "Developer"
+	},{
+		"name": "Erin White",
+		"email": "erwhite@vcu.edu",
+		"role": "Web Librarian"
+	}],
+	"require": {
+		"php": ">=5.3.0",
+		"slim/slim": "v2.4.2",
+		"j4mie/idiorm": "v1.4.1",
+		"j4mie/paris": "v1.4.2",
+		"slim/views": "0.1.*",
+		"twig/twig": "1.15.*",
+		"ezyang/htmlpurifier":"v4.6.0",
+		"phpmailer/phpmailer": "~5.2"
+	},
+	"require-dev":{
+		"codeception/codeception": "1.8.*"
+	},
+	"autoload":{
+		"psr-0":{
+			"Techstack": "src"
+		}
+	}
+
+}

@@ -237,7 +237,6 @@ a.skip-to-content {
 
 .interior {
     @extend %clearfix;
-    margin-top: 45px;
     // height: 160px;
     color: $color-accent;
     //background-image: url('../images/fn-3-overlay.jpg');
@@ -247,7 +246,7 @@ a.skip-to-content {
     text-align: center;
 
     #interior-content {
-      margin: 50px auto 40px auto;
+      margin: 85px auto 40px auto;
     }
 
     span {

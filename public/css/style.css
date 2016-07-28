@@ -678,13 +678,12 @@ input[type="submit"] {
 }
 
 .interior {
-  margin-top: 45px;
   color: #449bd2;
   background-color: #0D0D0B;
   text-align: center;
 }
 .interior #interior-content {
-  margin: 50px auto 40px auto;
+  margin: 85px auto 40px auto;
 }
 .interior span {
   font-family: "Roboto Slab", serif;

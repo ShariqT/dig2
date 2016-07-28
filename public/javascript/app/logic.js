@@ -7,7 +7,9 @@ App.Router.map(function(){
 });
 
 
-App.apiURL = BASE_URL;;App.ExampleModel = Ember.Object.extend({
+App.apiURL = BASE_URL;
+
+;App.ExampleModel = Ember.Object.extend({
 	
 });;App.ExampleStuffComponent = Ember.Component.extend({});;App.IndexRoute = Ember.Route.extend({
 	

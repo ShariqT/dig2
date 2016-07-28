@@ -57,36 +57,16 @@ a.skip-to-content {
    background: #1b435e;
    }
 
-.inputfile {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-}
+  input[type="file"] {
+    width: 100%;
+    margin-top:10px;
+   }
 
-.inputfile + label {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: white;
-    background-color: black;
-    display: inline-block;
-}
-
-.inputfile:focus + label,
-.inputfile + label:hover {
-    background-color: red;
-}
-
-.inputfile + label {
-  cursor: pointer; /* "hand" cursor */
-}
-
-.inputfile:focus + label {
-  outline: 1px dotted #000;
-  outline: -webkit-focus-ring-color auto 5px;
-}
+   input[type="submit"] {
+    background: #ea8d25;
+    width: 100%;
+    margin-top:10px;
+   }
 
 #menu-container {
   @extend %clearfix;
@@ -325,7 +305,7 @@ section {
   }
 
   h1,h2,h3,h4 {
-    color: #000000;
+    color: $color-primary;
     margin-top: 0;
   }
 

@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{title}}</title>
 	
 	{% for css in css_links %}
@@ -12,6 +16,26 @@
 	{% endfor %}
 </head>
 <body>
+	<a class="skip-to-content" href="#begincontent">Skip to content</a>
+	<nav id="menu-container">
+		<a href="javascript;:" tabindex="0" aria-label="Menu" class="menu-btn">
+		    <svg>
+		      <use xlink:href="/icons/sprite/icons.svg#menu-icon"/>
+		    </svg>
+		</a>
+		<ul class="menu-links">
+			<li><a href="/"><h1>{{title}}</h1></a></li>
+			<li><a id="l1" href="#">Link 1</a></li>
+		</ul>
+	</nav>
+	<nav id="menu" tabindex="-1" aria-expanded="false" aria-hidden="true">
+		<ul id="menu-inner" class="left">
+			<li><a id="tab-target" href="#"><h1>{{title}}</h1></a></li>
+			<li><a href="#">Link 1</a></li>
+
+		</ul>
+	</nav>
+<!-- END HEADER -->
 	{% block content %}{% endblock %}
 
 
